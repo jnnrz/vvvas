@@ -7,6 +7,3 @@ before_build:
 
 build_script:
   - ps: dotnet build
-  
-build:
-  project: vvvas.csproj
