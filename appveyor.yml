@@ -1,0 +1,9 @@
+﻿install:
+  - dotnet tool install --local GitVersion.Tool
+
+before_build:
+  - dotnet restore
+  - dotnet gitversion /l console /output buildserver /updateprojectfiles
+
+build:
+  project: vvvas.csproj
