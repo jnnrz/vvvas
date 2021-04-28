@@ -5,5 +5,8 @@ before_build:
   - dotnet restore
   - dotnet gitversion /l console /output buildserver /updateprojectfiles
 
+build_script:
+  - ps: dotnet build
+  
 build:
   project: vvvas.csproj
