@@ -11,9 +11,12 @@ namespace vvvas.Controllers
         [HttpGet("/time")]
         public async Task<IActionResult> Time()
         {
+            var vzTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Venezuela Standard Time");
+            var nowTime = TimeZoneInfo.ConvertTime(DateTime.Now, vzTimeZoneInfo);
+            
             var time = new
             {
-                Time = DateTime.Now.ToString(CultureInfo.CurrentCulture)
+                Time = nowTime.ToString(CultureInfo.CurrentCulture)
             };
             
             return await Task.Run(() => Ok(time));
