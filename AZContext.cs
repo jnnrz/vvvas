@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using vvvas.Models;
 
 namespace vvvas
 {
@@ -8,6 +9,6 @@ namespace vvvas
         {
         }
         
-        
+        public DbSet<Note> Notes { get; set; }
     }
 }
