@@ -23,6 +23,7 @@ namespace vvvas.Controllers
             try
             {
                 await context.Notes.AddAsync(note);
+                await context.SaveChangesAsync();
 
                 return Ok(note);
             }
