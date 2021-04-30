@@ -9,6 +9,7 @@ using vvvas.Models;
 namespace vvvas.Controllers
 {
     [ApiController]
+    [Route("[controller]")]
     public class NoteController : Controller
     {
         [HttpPost]
